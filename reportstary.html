@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./reportstary.css">
+    
+    
+    <title>Report Critical </title>
+</head>
+<body>
+
+
+   
+    <nav class=" bg-gray-800 flex items-center justify-between md:h-16 md:px-2">
+
+        
+        
+        <div class=" nav-links md:w-3/5">
+            <ul class=" flex items-center justify-evenly text-white ">
+                <br>
+                <a class="hover:border-b-2 hover:border-solid hover:border-white" href="index.html"><b>Home</b></a>
+                
+              </ul>
+              
+        </div>
+
+        <div class=" nav-links md:w-3/5">
+            <ul class=" flex items-center justify-evenly text-white ">
+                <br>
+                <a class="hover:border-b-2 hover:border-solid hover:border-white" href="donate.html"><b>Donate Animals</b></a>
+                
+              </ul>
+        </div>
+
+        <div class=" nav-links md:w-3/5">
+            <ul class=" flex items-center justify-evenly text-white ">
+                <br>
+                <a class="hover:border-b-2 hover:border-solid hover:border-white" href="#"><b>SOS</b></a>
+                
+              </ul>
+        </div>
+
+        <div class=" nav-links md:w-3/5">
+            <ul class=" flex items-center justify-evenly text-white ">
+                <br>
+                <a class="hover:border-b-2 hover:border-solid hover:border-white" href="./index.html#contact"><b>Contact</b></a>
+                
+              </ul>
+        </div>
+
+     
+    </nav>
+   
+    <div class="container">
+        <header>
+            <h1 id="title">Report any Critical stray animal to the nearest Animal Care centres</h1>
+            <p id="description">The details you provide with this form will be used to reach the nearest authority at the location of the stray animal.</p>
+        </header>
+        <form id="survey-form" action="https://formspree.io/f/xnqrvplp" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="address">
+                    Address(street address,City, pincode)
+                    <span class="hint">(optional)</span>
+                </label>
+                <input 
+                    type="address"
+                  
+                    name="first address" 
+                    id="first address"
+                    class="form-control"
+                    placeholder="Enter your correct address " />
+            </div>
+            <div class="form-group">
+                <label for="landmark">
+                    Landmark
+                    <span class="hint">(optional)</span>
+                </label>
+                <input 
+                    type="address"
+                  min="1"
+                    name="address" 
+                    id="address"
+                    class="form-control"
+                    placeholder="Enter the nearest landmark to identify the location." />
+            </div>
+            <div class="form-group">
+                <label for="email">Which type of stray animal?</label>
+                <select id="dropdown" name="type" class="form-control" required>
+                    <option disabled selected value>Select stray animal</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Cow">Cow</option>
+                    <option value="Pig">Pig</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <p >What is the condition of the animal currently?</p>
+                <label>
+                    <input name="user-recommend" value="Extremely" type="radio" class="input-radio" checked />
+                    Extremely Critical
+                </label>
+
+                <label>
+                    <input name="user-recommend" value="Critical" type="radio" class="input-radio" />
+                    Critical
+                </label>
+
+                <label>
+                     <input name="user-recommend" value="Moderate" type="radio" class="input-radio" />
+                    Moderate health
+                </label>
+            </div>
+        
+            
+            <div class="form-group" >
+                <label for="comment" >Would you like to share any additional information about the stray animal's condition?</label>
+                <textarea id="comment" class="input-textarea" name="comment" placeholder="Enter your comment here...Enter N/A if you don't want to share additional information" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button" style="color: #0209e5;">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
